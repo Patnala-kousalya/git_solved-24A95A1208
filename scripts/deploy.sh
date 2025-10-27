@@ -1,114 +1,58 @@
 #!/bin/bash
-<<<<<<< HEAD
-# Production Deployment Script
-# Version: 1.0.0
-
-set -e
-
-echo "====================================="
-echo "DevOps Simulator - Production Deploy"
-echo "====================================="
-
-# Configuration
-DEPLOY_ENV="production"
-DEPLOY_REGION="us-east-1"
-APP_PORT=8080
-
-echo "Environment: $DEPLOY_ENV"
-echo "Region: $DEPLOY_REGION"
-echo "Port: $APP_PORT"
-
-# Pre-deployment checks
-echo "Running pre-deployment checks..."
-=======
-# Experimental Deployment Script with AI
-# Version: 3.0.0-experimental
+# Unified Deployment Script (Production + Experimental)
+# Version: 3.0.0-unified
 
 set -euo pipefail
 
 echo "================================================"
-echo "DevOps Simulator - EXPERIMENTAL AI-POWERED DEPLOY"
+echo "DevOps Simulator - Unified Deployment"
 echo "================================================"
 
 # Configuration
-DEPLOY_ENV="experimental"
-DEPLOY_STRATEGY="canary"
+DEPLOY_ENV="unified"
+DEPLOY_STRATEGY="rolling-canary"
+DEPLOY_REGION="us-east-1"
 DEPLOY_CLOUDS=("aws" "azure" "gcp")
 AI_OPTIMIZATION=true
 CHAOS_TESTING=false
 
 echo "Environment: $DEPLOY_ENV"
 echo "Strategy: $DEPLOY_STRATEGY"
-echo "Target Clouds: ${DEPLOY_CLOUDS[@]}"
-echo "AI Optimization: $AI_OPTIMIZATION"
+echo "Region: $DEPLOY_REGION"
+echo "Clouds: ${DEPLOY_CLOUDS[*]}"
 
-# AI pre-deployment analysis
-if [ "$AI_OPTIMIZATION" = true ]; then
-    echo "🤖 Running AI pre-deployment analysis..."
-    python3 scripts/ai-analyzer.py --analyze-deployment
-    echo "✓ AI analysis complete"
-fi
-
-# Pre-deployment checks
-echo "Running advanced pre-deployment checks..."
->>>>>>> conflict-simulator
+# Pre-deployment validation
 if [ ! -f "config/app-config.yaml" ]; then
-    echo "Error: Configuration file not found!"
-    exit 1
+  echo "❌ Error: Missing configuration file!"
+  exit 1
 fi
 
-<<<<<<< HEAD
-# Deploy application
-echo "Starting deployment..."
-echo "Pulling latest Docker images..."
-# docker pull devops-simulator:latest
+echo "✓ Configuration file found"
 
-echo "Rolling update strategy initiated..."
-# kubectl rolling-update devops-simulator
-
-echo "Deployment completed successfully!"
-echo "Application available at: https://app.example.com"
-=======
-# Validate multi-cloud configuration
-for cloud in "${DEPLOY_CLOUDS[@]}"; do
-    echo "Validating $cloud configuration..."
-    # cloud-specific validation
-done
-
-# Deploy to multiple clouds
-echo "Starting multi-cloud deployment..."
-for cloud in "${DEPLOY_CLOUDS[@]}"; do
-    echo "Deploying to $cloud..."
-    # Deployment logic per cloud
-    echo "✓ $cloud deployment initiated"
-done
-
-# Canary deployment
-echo "Initiating canary deployment strategy..."
-echo "- 10% traffic to new version"
-echo "- Monitoring metrics..."
-sleep 2
-echo "- 50% traffic to new version"
-sleep 2
-echo "- 100% traffic to new version"
-
-# AI monitoring
+# Optional AI deployment analysis
 if [ "$AI_OPTIMIZATION" = true ]; then
-    echo "🤖 AI monitoring activated"
-    echo "- Anomaly detection: ACTIVE"
-    echo "- Auto-rollback: ENABLED"
-    echo "- Performance optimization: LEARNING"
+  echo "🤖 Running AI deployment optimization..."
+  python3 scripts/ai-analyzer.py --analyze-deployment
 fi
 
-# Chaos engineering
-if [ "$CHAOS_TESTING" = true ]; then
-    echo "⚠️  Running chaos engineering tests..."
-    # Chaos monkey logic
+# Deploy to all clouds
+for cloud in "${DEPLOY_CLOUDS[@]}"; do
+  echo "🌍 Deploying to $cloud..."
+  sleep 1
+  echo "✓ Deployment initiated on $cloud"
+done
+
+# Canary rollout
+echo "🚀 Canary Deployment:"
+echo "10% → 50% → 100% traffic shift"
+sleep 3
+echo "✓ Canary rollout completed successfully"
+
+# Post-deployment monitoring
+if [ "$AI_OPTIMIZATION" = true ]; then
+  echo "🤖 AI monitoring enabled: anomaly detection ACTIVE"
 fi
 
+echo "✅ Unified deployment completed successfully!"
+echo "Application live at: https://app.unified.example.com"
 echo "================================================"
-echo "Experimental deployment completed!"
-echo "AI Dashboard: https://ai.example.com"
-echo "Multi-Cloud Status: https://clouds.example.com"
-echo "================================================"
->>>>>>> conflict-simulator

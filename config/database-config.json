@@ -1,25 +1,5 @@
 {
   "connection": {
-<<<<<<< HEAD
-    "host": "prod-db.example.com",
-    "port": 5432,
-    "database": "devops_production",
-    "username": "prod_admin",
-    "ssl_mode": "require",
-    "pool_size": 20,
-    "timeout": 30
-  },
-  "backup": {
-    "enabled": true,
-    "schedule": "0 2 * * *",
-    "retention_days": 30,
-    "location": "/backups/database"
-  },
-  "replication": {
-    "enabled": true,
-    "replicas": 2,
-    "sync_mode": "synchronous"
-=======
     "type": "distributed",
     "hosts": [
       "node1.example.com",
@@ -27,26 +7,26 @@
       "node3.example.com"
     ],
     "port": 5432,
-    "database": "devops_experimental",
-    "username": "experimental_admin",
+    "database": "devops_unified",
+    "username": "prod_admin",
     "ssl_mode": "verify-full",
-    "pool_size": 50,
-    "timeout": 60,
+    "pool_size": 40,
+    "timeout": 45,
     "connection_pooling": "pgbouncer",
-    "read_replicas": 5
+    "read_replicas": 3
   },
   "backup": {
     "enabled": true,
     "strategy": "continuous",
-    "schedule": "*/15 * * * *",
-    "retention_days": 90,
-    "location": "s3://backups/experimental",
+    "schedule": "0 */2 * * *",
+    "retention_days": 60,
+    "location": "s3://backups/unified",
     "encryption": true,
     "geo_redundancy": true
   },
   "replication": {
     "enabled": true,
-    "replicas": 5,
+    "replicas": 3,
     "sync_mode": "semi-synchronous",
     "multi_region": true,
     "regions": ["us-east", "eu-west", "ap-south"]
@@ -60,6 +40,5 @@
     "slow_query_threshold": 100,
     "alert_on_anomaly": true,
     "metrics_export": "prometheus"
->>>>>>> conflict-simulator
   }
 }
