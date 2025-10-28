@@ -1,38 +1,42 @@
 # DevOps Simulator
 
-A comprehensive CI/CD configuration management tool for enterprise deployments with AI integration.
+A comprehensive CI/CD configuration management tool for enterprise deployments.
 
 ## Project Status
-**Version**: 3.0.0-experimental  
-**Environment**: Testing  
-**Maintainer**: DevOps Innovation Team
+- **Version**: 1.0.0 (Production), 2.0.0-beta (Development)
+- **Environments**: Production & Development
+- **Student**: Patnala Kousalya
+- **Student ID**: 24A95A1208
+- **Repository**: https://github.com/Patnala-kousalya/git_solved-24A95A1208
+
+---
 
 ## Features
-- 🤖 AI-powered deployment optimization
-- 🌐 Multi-cloud orchestration (AWS, Azure, GCP, DigitalOcean)
-- 📈 Predictive scaling with machine learning
-- 🔒 Zero-trust security architecture
-- 🌊 Event-driven architecture
-- 🎯 Chaos engineering tools
+
+### 🌐 Core Features
 - Automated deployment scripts
 - Real-time monitoring
 - Configuration management
 - Backup and recovery system
 
-## Quick Start
-### Standard Mode
-1. Clone the repository  
-2. Configure environment variables  
-3. Run deployment script with `--experimental` flag  
-4. Monitor system health
+### ⚙️ Production Features
+- SSL/TLS encryption
+- Auto-scaling
+- Load balancer integration
+- Scheduled backups
 
-### AI-Enhanced Mode
+### 🧪 Development (Beta) Features
+- Docker Compose integration
+- Hot reload enabled
+- Debug mode active
+- Enhanced logging
+- Mock external APIs
+
+---
+
+## 🚀 Quick Start
+
+### Production Mode
 ```bash
-# Install AI dependencies
-pip install tensorflow keras
-
-# Initialize AI models
-./scripts/init-ai-models.sh
-
-# Start with AI-enhanced mode
-npm run start:ai
+export DEPLOY_ENV=production
+./scripts/deploy.sh
