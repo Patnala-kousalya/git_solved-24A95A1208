@@ -1,1 +1,12 @@
-"# Change Log" 
+- 435a1f1: docs: add final project artifacts (kousalya, 2 minutes ago)
+- 8a82a94: docs: add GIT_JOURNEY.md with all Git command history (kousalya, 20 minutes ago)
+- 8c50456: Added Node.js setup files and finalized README (kousalya, 19 hours ago)
+- 4f52754: Resolved README.md merge conflict (kousalya, 20 hours ago)
+- 95ba17e: Resolved merge conflicts; finalized production + development configs and completed project structure (kousalya, 22 hours ago)
+- 194e47e: Recreated missing script files and finalized folder structure (kousalya, 2 days ago)
+- 740fcf7: Resolved merge conflicts and unified production + experimental configs (kousalya, 2 days ago)
+- a99c286: Resolved all merge conflicts (kousalya, 3 days ago)
+- d3dd9b2: updating conflict-simulator (Hanu Gupta, 6 days ago)
+- 0312c6f: updating main (Hanu Gupta, 6 days ago)
+- fadfd24: Revise README for DevOps Simulator project (Hanu Gupta, 6 days ago)
+- ae630eb: Initial commit (Hanu Gupta, 6 days ago)
